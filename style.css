@@ -1,0 +1,48 @@
+
+body {
+  background-color: #2c2c2c; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+.hover-card {
+  width: 300px;
+  height: 200px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="4" fill="%23ff7eb3" /><circle cx="4" cy="4" r="2" fill="%23ff758c" /><circle cx="16" cy="16" r="2" fill="%23ff758c" /></svg>') repeat;
+  background-size: 50px 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+/* Keyframe animation for moving and changing colors */
+@keyframes move-and-color {
+  0% {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="4" fill="%23ff7eb3" /><circle cx="4" cy="4" r="2" fill="%23ff758c" /><circle cx="16" cy="16" r="2" fill="%23ff758c" /></svg>');
+    background-position: 0 0;
+  }
+  50% {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="4" fill="%23ffcc00" /><circle cx="4" cy="4" r="2" fill="%2300ccff" /><circle cx="16" cy="16" r="2" fill="%23ff33cc" /></svg>');
+    background-position: 25px 25px;
+  }
+  100% {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="4" fill="%2300ffaa" /><circle cx="4" cy="4" r="2" fill="%23ff0066" /><circle cx="16" cy="16" r="2" fill="%23ff6600" /></svg>');
+    background-position: 50px 50px;
+  }
+}
+
+/* Hover effect */
+.hover-card:hover {
+  animation: move-and-color 3s linear infinite;
+}
